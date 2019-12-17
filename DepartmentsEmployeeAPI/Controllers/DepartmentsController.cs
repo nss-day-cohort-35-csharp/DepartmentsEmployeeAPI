@@ -27,6 +27,12 @@ namespace DepartmentEmployeesExample.Controllers
                 return new SqlConnection(_config.GetConnectionString("DefaultConnection"));
             }
         }
+
+        /// <summary>
+        /// Gets a list of all departments from database
+        /// </summary>
+        /// <param name="q">Search term for department name</param>
+        /// <returns>A list of departments</returns>
         [HttpGet]
         public async Task<IActionResult> Get(string q)
         {
